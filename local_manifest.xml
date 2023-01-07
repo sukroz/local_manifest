@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<manifest>
+ 
+ <remote name="ImSurajxD" fetch="https://gitlab.com/ImSurajxD"/>
+ 
+ 
+  <!-- github-silicon -->
+ <remote name="github-silicon"
+	 fetch="https://github.com/AOSP-Silicon" />
+
+ <!-- Evolution X specific markw source trees -->
+ <project path="device/xiaomi/markw" name="rianza/android_device_xiaomi_markw1" remote=github revision="evolution-x-tiramisu" clone-depth="1" />
+ <project path="vendor/xiaomi" name="SonicBSV/proprietary_vendor_xiaomi" remote="github" revision="T" clone-depth="1" />
+ <project path="kernel/xiaomi/markw" name="SonicBSV/android_kernel_xiaomi_markw_new" remote="github" revision="T" clone-depth="1" />
+
+ <!-- Clang toolchain -->
+ <project path="prebuilts/clang/host/linux-x86/clang-cosmic" name="cosmic-clang" remote="gitlab-me" revision="release/14.x" clone-depth="1" />
+
+ <!-- Frameworks -->
+ <remove-project name="frameworks_base" />
+ <remove-project name="frameworks_native" />
+ <remove-project name="frameworks_opt_telephony" />
+ <project path="frameworks/opt/telephony" name="evolution-x_frameworks_opt_telephony" remote="github-silicon" revision="tiramisu" clone-depth="1" />
+ <project path="frameworks/base" name="evolution-x_frameworks_base" remote="github-silicon" revision="tiramisu" clone-depth="1" />
+ <project path="frameworks/native" name="evolution-x_frameworks_native" remote="github-silicon" revision="tiramisu" clone-depth="1" />
+ 
+ <!-- Prebuilt clang r450784d -->
+ <project path="prebuilts/clang/host/linux-x86/clang-r450784d" name="Amritorock/clang-r450784d" remote="gitlab" revision="master" clone-depth="1" />
+</manifest>
